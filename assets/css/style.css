@@ -1,0 +1,52 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap");
+
+body,
+html {
+  font-family: "Lato", sans-serif !important;
+}
+
+p {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+/* === Typography === */
+
+.main-title {
+  font-size: 36px;
+  font-weight: 700;
+}
+
+.second-title {
+  font-size: 32px;
+  font-weight: 600;
+}
+
+/* === End of Typography === */
+
+.home-hero-image::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(
+    53.66deg,
+    rgba(27, 28, 30, 0.87) 10.53%,
+    rgba(27, 28, 30, 0.4785) 42.55%,
+    rgba(27, 28, 30, 0) 94.36%
+  );
+}
+
+/* === Utilities === */
+
+.transition {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.invert {
+  filter: invert(100%);
+}
