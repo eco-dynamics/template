@@ -24,7 +24,7 @@
       <div id="nav-mobile">
         <nav
           class="transition"
-          :class="scroll ? 'bg-white shadow py-2' : 'bg-transparent py-4'"
+          :class="scroll ? 'bg-white shadow py-2' : 'bg-transparent py-3'"
           @scroll.window="scroll = (window.pageYOffset < 8) ? false: true"
         >
           <div
@@ -61,27 +61,40 @@
                 </svg>
               </div>
               <div
-                class="offcanvas offcanvas-end text-bg-dark w-75"
+                class="offcanvas offcanvas-end w-75"
                 tabindex="-1"
                 id="ofcanvasMenu"
                 aria-labelledby="ofcanvasMenuLabel"
               >
                 <div class="offcanvas-header">
-                  <h5 class="offcanvas-title" id="ofcanvasMenuLabel">
+                  <!-- <h5 class="offcanvas-title" id="ofcanvasMenuLabel">
                     Offcanvas
-                  </h5>
+                  </h5> -->
                   <button
                     type="button"
-                    class="btn-close btn-close-white"
+                    class="btn-close ms-auto"
                     data-bs-dismiss="offcanvas"
                     aria-label="Close"
                   ></button>
                 </div>
                 <div class="offcanvas-body">
-                  <div>
-                    Some text as placeholder. In real life you can have the
-                    elements you have chosen. Like, text, images, lists, etc.
-                  </div>
+                  <ul class="list-unstyled">
+                    <li class="py-2">
+                      <a class="mobile-navlink" href="/">About</a>
+                    </li>
+                    <li class="py-2">
+                      <a class="mobile-navlink" href="/">News</a>
+                    </li>
+                    <li class="py-2">
+                      <a class="mobile-navlink" href="/">Partners</a>
+                    </li>
+                    <li class="py-2">
+                      <a class="mobile-navlink" href="/">Knowledge</a>
+                    </li>
+                    <li class="py-2">
+                      <a class="mobile-navlink" href="/">Contact</a>
+                    </li>
+                  </ul>
                 </div>
               </div>
             </div>
@@ -134,14 +147,14 @@
             <img
               src="./assets/images/overview-mittermeier.png"
               alt="overview-mittermeier"
-              class="img-fluid"
+              class="img-fluid rounded"
             />
           </div>
           <div class="col-lg-8">
             <img
               src="./assets/images/overview-florest.png"
               alt="overview-florest"
-              class="img-fluid"
+              class="img-fluid rounded"
             />
           </div>
         </div>
@@ -154,16 +167,302 @@
 
     <section class="py-5">
       <div class="container px-3">
-        <div class="row">
+        <div class="row mb-4">
           <div class="col-lg-8">
             <h2 class="second-title">
               The Ecodynamics of Sustainable Agriculture
             </h2>
           </div>
         </div>
-        <div class="row"></div>
+        <div class="row row-gap-4">
+          <div class="col-lg-4">
+            <div class="c-card-feature p-4 rounded">
+              <div class="c-card-icon mb-4 py-2">
+                <img
+                  src="./assets/images/feature1-light.svg"
+                  alt="feature1-icon"
+                />
+              </div>
+              <div class="c-card-body pb-0">
+                <h3 class="fw-semibold mb-3">Feature 1</h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur. Tristique eget enim
+                  eget sed risus odio. Odio eu sapien sem donec. Sed arcu sed
+                  duis tincidunt aliquet et. Sollicitudin mauris id viverra
+                  egestas.
+                </p>
+                <p>Discover</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="c-card-feature p-4 rounded">
+              <div class="c-card-icon mb-4 py-2">
+                <img
+                  src="./assets/images/feature2-light.svg"
+                  alt="feature1-icon"
+                />
+              </div>
+              <div class="c-card-body pb-0">
+                <h3 class="fw-semibold mb-3">Feature 2</h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur. Tristique eget enim
+                  eget sed risus odio. Odio eu sapien sem donec. Sed arcu sed
+                  duis tincidunt aliquet et. Sollicitudin mauris id viverra
+                  egestas.
+                </p>
+                <p>Discover</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="c-card-feature p-4 rounded">
+              <div class="c-card-icon mb-4 py-2">
+                <img
+                  src="./assets/images/feature3-light.svg"
+                  alt="feature1-icon"
+                />
+              </div>
+              <div class="c-card-body pb-0">
+                <h3 class="fw-semibold mb-3">Feature 3</h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur. Tristique eget enim
+                  eget sed risus odio. Odio eu sapien sem donec. Sed arcu sed
+                  duis tincidunt aliquet et. Sollicitudin mauris id viverra
+                  egestas.
+                </p>
+                <p>Discover</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
+
+    <section class="bg-light py-5">
+      <div class="container px-3">
+        <div class="row mb-4">
+          <div class="col-lg-8">
+            <h2 class="second-title">Latest News and Updates on Ecodynamics</h2>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Voluptates, cupiditate!
+            </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="card border-0">
+              <img
+                src="./assets/images/news-image1.png"
+                alt="news-images"
+                class="card-img-top img-fluid"
+              />
+              <div class="card-body">
+                <h5 class="card-title fw-semibold mb-3">
+                  New Study Reveals the Importance of Keystone Species in
+                  Ecodynamic Systems
+                </h5>
+                <p class="card-text">
+                  recent study has shed light on the vital role that certain
+                  species play in maintaining ecological systems. These
+                  "keystone species" have a disproportionate impact...
+                </p>
+                <div class="d-flex align-items-center">
+                  <div class="avatar me-2">
+                    <img
+                      src="./assets/images/avatar1.png"
+                      alt="avatar"
+                      class="rounded-pill"
+                    />
+                  </div>
+                  <div class="username">
+                    <h6 class="fw-semibold mb-0">Author Name</h6>
+                    <h6 class="text-black-50">21 April 2023</h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-12">
+            <hr />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 mb-4">
+            <div class="card border-0">
+              <div class="row g-0">
+                <div class="col-7">
+                  <img
+                    src="./assets/images/news-image2.png"
+                    alt="news-image"
+                    class="img-fluid rounded-start"
+                  />
+                </div>
+                <div class="col-5">
+                  <div class="card-body">
+                    <h5 class="fs-sm fw-medium">
+                      Conservation Group Launches Campaign to Protect Endangered
+                      Ecosystems
+                    </h5>
+                    <h6 class="fs-xs mb-0">28 March 2022</h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 mb-4">
+            <div class="card border-0">
+              <div class="row g-0">
+                <div class="col-7">
+                  <img
+                    src="./assets/images/news-image3.png"
+                    alt="news-image"
+                    class="img-fluid rounded-start"
+                  />
+                </div>
+                <div class="col-5">
+                  <div class="card-body">
+                    <h5 class="fs-sm fw-medium">
+                      Conservation Group Launches Campaign to Protect Endangered
+                      Ecosystems
+                    </h5>
+                    <h6 class="fs-xs mb-0">28 March 2022</h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 mb-4">
+            <div class="card border-0">
+              <div class="row g-0">
+                <div class="col-7">
+                  <img
+                    src="./assets/images/news-image4.png"
+                    alt="news-image"
+                    class="img-fluid rounded-start"
+                  />
+                </div>
+                <div class="col-5">
+                  <div class="card-body">
+                    <h5 class="fs-sm fw-medium">
+                      Conservation Group Launches Campaign to Protect Endangered
+                      Ecosystems
+                    </h5>
+                    <h6 class="fs-xs mb-0">28 March 2022</h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="position-relative">
+      <div class="partner-background position-relative w-100 overflow-hidden">
+        <img
+          src="./assets/images/partnership-background.png"
+          alt="hero-background"
+        />
+      </div>
+      <div
+        class="container position-absolute top-0 h-100 d-flex align-items-center"
+      >
+        <div>
+          <h2 class="second-title text-white mb-3">
+            Building a Sustainable Future Through Collaborative Partnership
+          </h2>
+          <p class="text-white mb-4">
+            Our approach to partnerships is based on the understanding that
+            complex ecological challenges require collective efforts, shared
+            expertise, and mutual support
+          </p>
+          <button
+            type="button"
+            class="btn btn-outline-light py-3 fw-semibold px-4 rounded-1"
+          >
+            Our Partners
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 mb-4">
+            <h2 class="second-title">
+              Empower Yourself With Ecodynamics Knowledge Center!
+            </h2>
+            <p>
+              A recent study has shed light on the vital role that certain
+              species play in maintaining ecological systems. These “keystone
+              species” have a disproportionate impact on the environment and
+              their loss could have far-reaching effects on the health of entire
+              ecosystems.
+            </p>
+            <button class="btn main-button rounded-1">Read More</button>
+          </div>
+          <div class="col-lg-6">
+            <div class="knowledge-image position-relative">
+              <img
+                src="./assets/images/knowledge-image.png"
+                alt="knowledge-image"
+                class="img-fluid rounded"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="bg-light pt-5 pb-4">
+      <div class="container">
+        <div class="row mb-3">
+          <div class="col-lg-6">
+            <img src="./assets/images/ecodynamics-logo.svg" alt="footer-logo" />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-6 mb-3">
+            <p>
+              Lorem ipsum dolor sit amet consectetur. Quis euismod aliquam in
+              laoreet. Eget eu cursus nulla arcu eget. Proin vitae massa sit
+              ullamcorper lectus. Dictumst at amet.
+            </p>
+          </div>
+          <div class="col-lg-6">
+            <div class="d-flex">
+              <input
+                type="email"
+                name="email"
+                id="email"
+                class="form-control rounded-0 rounded-start-1"
+                placeholder="Enter your email address"
+              />
+              <button class="btn main-button rounded-0 rounded-end-1">
+                Subscribe
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-12">
+            <hr class="my-4" />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-6">
+            <p class="fs-base fw-semibold text-black-50">
+              &copy; 2023 Built to Flourish | All rights reserved.
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"

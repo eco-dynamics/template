@@ -1,5 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap");
 
+:root {
+  --light-gray: #f8f9fa;
+  --main-green: #4b7135;
+  --second-green: #85a33d;
+}
+
 body,
 html {
   font-family: "Lato", sans-serif !important;
@@ -22,7 +28,37 @@ p {
   font-weight: 600;
 }
 
+.fs-xs {
+  font-size: 13px;
+}
+
+.fs-sm {
+  font-size: 14px;
+}
+
+.fs-base {
+  font-size: 15px;
+}
+
 /* === End of Typography === */
+
+/* === Button Style === */
+
+.btn.main-button {
+  background-color: var(--main-green);
+  color: #f6f6f6;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 16px 30px;
+}
+
+.btn.main-button:hover,
+.btn.main-button:active,
+.btn.main-button:focus-visible {
+  background-color: var(--second-green);
+  color: #f6f6f6;
+}
+/* === End of Button Style === */
 
 .home-hero-image::after {
   content: "";
@@ -37,6 +73,70 @@ p {
     rgba(27, 28, 30, 0.4785) 42.55%,
     rgba(27, 28, 30, 0) 94.36%
   );
+}
+
+.partner-background {
+  height: 570px;
+}
+
+.partner-background::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(
+    90deg,
+    rgba(48, 48, 48, 0) 0%,
+    rgba(48, 48, 48, 0.697) 49.2%,
+    rgba(48, 48, 48, 0.85) 100%
+  );
+  transform: rotate(180deg);
+}
+
+.knowledge-image::before {
+  content: "";
+  position: absolute;
+  width: 96%;
+  height: 100%;
+  left: 0;
+  right: 0;
+  bottom: -12px;
+  margin: 0 auto;
+  border-radius: 0.375rem;
+  background-color: #f6f6f6;
+  z-index: -1;
+}
+
+.feature-grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  overflow-x: auto;
+  scroll-snap-type: x proximity;
+  white-space: nowrap;
+}
+
+.feature-grid-item {
+  height: 100%;
+  width: 100%;
+  scroll-snap-align: start;
+}
+
+.c-card-feature {
+  background-color: var(--main-green);
+  color: #fff;
+}
+
+.card-feature:hover {
+  background-color: var(--light-gray);
+}
+
+.mobile-navlink {
+  color: #303030;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 600;
 }
 
 /* === Utilities === */
