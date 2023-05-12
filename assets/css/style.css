@@ -4,6 +4,7 @@
   --light-gray: #f8f9fa;
   --main-green: #4b7135;
   --second-green: #85a33d;
+  --main-dark: #1a1d20;
 }
 
 body,
@@ -14,6 +15,10 @@ html {
 p {
   font-size: 18px;
   font-weight: 400;
+}
+
+a {
+  text-decoration: none !important;
 }
 
 /* === Typography === */
@@ -38,6 +43,10 @@ p {
 
 .fs-base {
   font-size: 15px;
+}
+
+.fs-medium {
+  font-size: 18px !important;
 }
 
 /* === End of Typography === */
@@ -95,6 +104,11 @@ p {
   transform: rotate(180deg);
 }
 
+/* .partner-background img {
+  background-size: cover;
+  background-position: center;
+} */
+
 .knowledge-image::before {
   content: "";
   position: absolute;
@@ -149,4 +163,112 @@ p {
 
 .invert {
   filter: invert(100%);
+}
+
+.object-position-center {
+  object-position: center;
+}
+
+/* === Header === */
+.navbar-logo img {
+  height: 24px;
+}
+
+.navlink {
+  transition: color 0.3s ease-in-out;
+  color: #fff;
+}
+
+.navlink:hover {
+  color: #cbcbcb;
+}
+
+.scrolled > .navlink {
+  color: var(--main-dark);
+}
+
+.scrolled > .navlink:hover {
+  color: #78a52b;
+}
+
+/* ===End of Header === */
+
+/* === Footer === */
+.footer-logo img {
+  height: 32px;
+}
+/* === Footer === */
+
+@media (min-width: 992px) {
+  .main-title {
+    font-size: 48px;
+  }
+
+  .second-title {
+    font-size: 36px;
+  }
+
+  .navbar-logo img {
+    height: 28px;
+  }
+
+  .footer-link {
+    transition: color 0.3s ease-in-out;
+    font-size: 18px;
+    color: var(--main-dark);
+  }
+
+  .footer-link:hover {
+    color: #78a52b;
+  }
+
+  .footer-social {
+    transition: color 0.3s ease-in-out;
+    font-size: 22px;
+    color: var(--main-dark);
+  }
+
+  .footer-social:hover {
+    color: #78a52b;
+  }
+}
+
+@media (min-width: 1200px) {
+  .main-title {
+    font-size: 72px;
+  }
+
+  .second-title {
+    font-size: 48px;
+  }
+
+  .partner-background {
+    height: 650px;
+  }
+
+  .partner-background::after {
+    transform: rotate(0);
+  }
+
+  .knowledge-text {
+    padding-right: 11rem;
+  }
+
+  .knowledge-image::before {
+    width: 100%;
+    right: 0;
+    bottom: 0;
+  }
+
+  .knowledge-image img {
+    transform: translate(-24px, -24px);
+  }
+
+  .navbar-logo img {
+    height: 32px;
+  }
+
+  .footer-logo img {
+    height: 45px;
+  }
 }

@@ -14,6 +14,11 @@
       crossorigin="anonymous"
     />
 
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+
     <script
       defer
       src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
@@ -21,7 +26,7 @@
   </head>
   <body>
     <header x-data="{scroll: false}" class="fixed-top">
-      <div id="nav-mobile">
+      <div id="mobile-nav" class="d-lg-none">
         <nav
           class="transition"
           :class="scroll ? 'bg-white shadow py-2' : 'bg-transparent py-3'"
@@ -101,6 +106,32 @@
           </div>
         </nav>
       </div>
+
+      <div id="main-nav" class="d-none d-lg-block">
+        <nav
+          class="transition"
+          :class="scroll ? 'bg-white shadow py-3' : 'bg-transparent py-4'"
+          @scroll.window="scroll = (window.pageYOffset < 8) ? false: true"
+        >
+          <div class="container d-flex justify-content-between py-2">
+            <div class="navbar-logo">
+              <img
+                x-data="{onTop : true}"
+                :src="onTop ? './assets/images/ecodynamics-negative-logo.svg' : './assets/images/ecodynamics-logo.svg'"
+                @scroll.window="onTop = (window.pageYOffset > 8) ? false: true"
+                alt="ecodynamics-negative-logo"
+              />
+            </div>
+            <div class="d-flex" :class="scroll ? 'scrolled' : ''">
+              <a class="navlink fs-medium px-3" href="/">About</a>
+              <a class="navlink fs-medium px-3" href="/">News</a>
+              <a class="navlink fs-medium px-3" href="/">Partners</a>
+              <a class="navlink fs-medium px-3" href="/">Knowledge</a>
+              <a class="navlink fs-medium ps-3" href="/">Contact</a>
+            </div>
+          </div>
+        </nav>
+      </div>
     </header>
 
     <section class="position-relative" id="homeHero">
@@ -113,15 +144,18 @@
           class="w-100 h-100 object-fit-cover"
         />
       </div>
-      <div
-        class="container px-3 position-absolute top-0 h-100 d-flex flex-column justify-content-end"
-      >
-        <div class="text-white" style="margin-bottom: 120px">
-          <h5 class="mb-4">/ Introduction</h5>
-          <h1 class="main-title">
-            Deliver Impact, Discover the Power <br />
-            of Ecodynamics
-          </h1>
+      <div class="position-absolute top-0 h-100 w-100">
+        <div
+          class="container mx-auto position-relative top-0 h-100 d-flex flex-column justify-content-end"
+        >
+          <div class="text-white" style="margin-bottom: 120px">
+            <h5 class="mb-4">/ Introduction</h5>
+            <h1 class="main-title">
+              Deliver Impact,<br />
+              Discover the Power <br />
+              of Ecodynamics
+            </h1>
+          </div>
         </div>
       </div>
     </section>
@@ -143,18 +177,18 @@
           </div>
         </div>
         <div class="row g-3">
-          <div class="col-lg-4">
+          <div class="col-lg-5">
             <img
               src="./assets/images/overview-mittermeier.png"
               alt="overview-mittermeier"
-              class="img-fluid rounded"
+              class="w-100 h-100 rounded"
             />
           </div>
-          <div class="col-lg-8">
+          <div class="col-lg-7">
             <img
               src="./assets/images/overview-florest.png"
               alt="overview-florest"
-              class="img-fluid rounded"
+              class="w-100 h-100 rounded"
             />
           </div>
         </div>
@@ -250,35 +284,41 @@
             </p>
           </div>
         </div>
-        <div class="row">
-          <div class="col-lg-4">
+        <div class="row mb-lg-4">
+          <div class="col-lg-12">
             <div class="card border-0">
-              <img
-                src="./assets/images/news-image1.png"
-                alt="news-images"
-                class="card-img-top img-fluid"
-              />
-              <div class="card-body">
-                <h5 class="card-title fw-semibold mb-3">
-                  New Study Reveals the Importance of Keystone Species in
-                  Ecodynamic Systems
-                </h5>
-                <p class="card-text">
-                  recent study has shed light on the vital role that certain
-                  species play in maintaining ecological systems. These
-                  "keystone species" have a disproportionate impact...
-                </p>
-                <div class="d-flex align-items-center">
-                  <div class="avatar me-2">
-                    <img
-                      src="./assets/images/avatar1.png"
-                      alt="avatar"
-                      class="rounded-pill"
-                    />
-                  </div>
-                  <div class="username">
-                    <h6 class="fw-semibold mb-0">Author Name</h6>
-                    <h6 class="text-black-50">21 April 2023</h6>
+              <div class="row align-items-center">
+                <div class="col-lg-6">
+                  <img
+                    src="./assets/images/news-image1.png"
+                    alt="news-images"
+                    class="card-img-top img-fluid"
+                  />
+                </div>
+                <div class="col-lg-6">
+                  <div class="card-body">
+                    <h5 class="card-title fw-semibold mb-3">
+                      New Study Reveals the Importance of Keystone Species in
+                      Ecodynamic Systems
+                    </h5>
+                    <p class="card-text">
+                      recent study has shed light on the vital role that certain
+                      species play in maintaining ecological systems. These
+                      "keystone species" have a disproportionate impact...
+                    </p>
+                    <div class="d-flex align-items-center">
+                      <div class="avatar me-2">
+                        <img
+                          src="./assets/images/avatar1.png"
+                          alt="avatar"
+                          class="rounded-pill"
+                        />
+                      </div>
+                      <div class="username">
+                        <h6 class="fw-semibold mb-0">Author Name</h6>
+                        <h6 class="text-black-50">21 April 2023</h6>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -287,21 +327,21 @@
         </div>
         <div class="row">
           <div class="col-lg-12">
-            <hr />
+            <hr class="d-lg-none" />
           </div>
         </div>
         <div class="row">
           <div class="col-lg-4 mb-4">
             <div class="card border-0">
               <div class="row g-0">
-                <div class="col-7">
+                <div class="col-7 col-lg-12">
                   <img
                     src="./assets/images/news-image2.png"
                     alt="news-image"
-                    class="img-fluid rounded-start"
+                    class="img-fluid rounded-start rounded-start-0"
                   />
                 </div>
-                <div class="col-5">
+                <div class="col-5 col-lg-12">
                   <div class="card-body">
                     <h5 class="fs-sm fw-medium">
                       Conservation Group Launches Campaign to Protect Endangered
@@ -361,43 +401,59 @@
       </div>
     </section>
 
-    <section class="position-relative">
-      <div class="partner-background position-relative w-100 overflow-hidden">
-        <img
-          src="./assets/images/partnership-background.png"
-          alt="hero-background"
-        />
-      </div>
-      <div
-        class="container position-absolute top-0 h-100 d-flex align-items-center"
-      >
-        <div>
-          <h2 class="second-title text-white mb-3">
-            Building a Sustainable Future Through Collaborative Partnership
-          </h2>
-          <p class="text-white mb-4">
-            Our approach to partnerships is based on the understanding that
-            complex ecological challenges require collective efforts, shared
-            expertise, and mutual support
-          </p>
-          <button
-            type="button"
-            class="btn btn-outline-light py-3 fw-semibold px-4 rounded-1"
-          >
-            Our Partners
-          </button>
+    <section class="py-5">
+      <div class="container position-relative">
+        <div class="row">
+          <div class="col-lg-12">
+            <div
+              class="partner-background position-relative w-100 rounded overflow-hidden"
+            >
+              <img
+                src="./assets/images/partnership-background.png"
+                alt="hero-background"
+                class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover object-position-center"
+              />
+            </div>
+          </div>
         </div>
+        <div class="position-absolute top-0 start-0 w-100 h-100">
+          <div class="container h-100 d-flex align-items-center">
+            <div class="row justify-content-end">
+              <div class="col-lg-6 pe-lg-5">
+                <h2 class="second-title text-white mb-3">
+                  Building a Sustainable Future Through Collaborative
+                  Partnership
+                </h2>
+                <p class="text-white mb-4 pe-lg-5">
+                  Our approach to partnerships is based on the understanding
+                  that complex ecological challenges require collective efforts,
+                  shared expertise, and mutual support
+                </p>
+                <button
+                  type="button"
+                  class="btn btn-outline-light py-3 fw-semibold px-4 rounded-1"
+                >
+                  Our Partners
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- <div class="position-absolute top-0">
+          
+        </div> -->
       </div>
     </section>
 
     <section class="py-5">
       <div class="container">
-        <div class="row">
-          <div class="col-lg-6 mb-4">
-            <h2 class="second-title">
-              Empower Yourself With Ecodynamics Knowledge Center!
+        <div class="row align-items-center">
+          <div class="col-lg-6 mb-4 pe-lg-5">
+            <h2 class="second-title mb-4">
+              Empower Yourself <br class="d-none d-lg-block" />
+              With Ecodynamics Knowledge Center!
             </h2>
-            <p>
+            <p class="knowledge-text mb-4">
               A recent study has shed light on the vital role that certain
               species play in maintaining ecological systems. These “keystone
               species” have a disproportionate impact on the environment and
@@ -408,11 +464,17 @@
           </div>
           <div class="col-lg-6">
             <div class="knowledge-image position-relative">
-              <img
-                src="./assets/images/knowledge-image.png"
-                alt="knowledge-image"
-                class="img-fluid rounded"
-              />
+              <picture>
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="./assets/images/knowledge-image-xl.png"
+                />
+                <img
+                  src="./assets/images/knowledge-image.png"
+                  alt="knowledge-image"
+                  class="img-fluid w-100 rounded"
+                />
+              </picture>
             </div>
           </div>
         </div>
@@ -421,32 +483,95 @@
 
     <footer class="bg-light pt-5 pb-4">
       <div class="container">
-        <div class="row mb-3">
+        <div class="row mb-4">
           <div class="col-lg-6">
-            <img src="./assets/images/ecodynamics-logo.svg" alt="footer-logo" />
+            <div class="footer-logo">
+              <img
+                src="./assets/images/ecodynamics-logo.svg"
+                alt="footer-logo"
+              />
+            </div>
           </div>
         </div>
-        <div class="row">
-          <div class="col-lg-6 mb-3">
-            <p>
-              Lorem ipsum dolor sit amet consectetur. Quis euismod aliquam in
-              laoreet. Eget eu cursus nulla arcu eget. Proin vitae massa sit
-              ullamcorper lectus. Dictumst at amet.
-            </p>
+        <div class="row mb-2">
+          <div class="col-lg-6 mb-3 mb-lg-0">
+            <div class="row">
+              <div class="col-lg-10">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur. Quis euismod aliquam
+                  in laoreet. Eget eu cursus nulla arcu eget. Proin vitae massa
+                  sit ullamcorper lectus. Dictumst at amet.
+                </p>
+              </div>
+            </div>
           </div>
           <div class="col-lg-6">
-            <div class="d-flex">
-              <input
-                type="email"
-                name="email"
-                id="email"
-                class="form-control rounded-0 rounded-start-1"
-                placeholder="Enter your email address"
-              />
-              <button class="btn main-button rounded-0 rounded-end-1">
-                Subscribe
-              </button>
+            <div class="row justify-content-end">
+              <div class="col-12 col-lg-10 col-xl-8">
+                <div class="d-flex">
+                  <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    class="form-control rounded-0 rounded-start-1"
+                    placeholder="Enter your email address"
+                  />
+                  <button class="btn main-button rounded-0 rounded-end-1">
+                    Subscribe
+                  </button>
+                </div>
+              </div>
             </div>
+          </div>
+        </div>
+        <div class="row d-none d-lg-flex">
+          <div class="col-lg-6">
+            <ul class="d-flex list-unstyled mb-0">
+              <li class="pe-2 pe-lg-3">
+                <a class="footer-link" href="/">About</a>
+              </li>
+              <li class="px-2 px-lg-3">
+                <a class="footer-link" href="/">News</a>
+              </li>
+              <li class="px-2 px-lg-3">
+                <a class="footer-link" href="/">Partners</a>
+              </li>
+              <li class="px-2 px-lg-3">
+                <a class="footer-link" href="/">Knowledge</a>
+              </li>
+              <li class="px-2 px-lg-3">
+                <a class="footer-link" href="/">Contact</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-6">
+            <ul class="list-unstyled d-flex justify-content-end mb-0">
+              <li class="px-3">
+                <a class="footer-social" href=""
+                  ><i class="bi bi-instagram"></i
+                ></a>
+              </li>
+              <li class="px-3">
+                <a class="footer-social" href=""
+                  ><i class="bi bi-youtube"></i
+                ></a>
+              </li>
+              <li class="px-3">
+                <a class="footer-social" href=""
+                  ><i class="bi bi-facebook"></i
+                ></a>
+              </li>
+              <li class="px-3">
+                <a class="footer-social" href=""
+                  ><i class="bi bi-linkedin"></i
+                ></a>
+              </li>
+              <li class="px-3">
+                <a class="footer-social" href=""
+                  ><i class="bi bi-twitter"></i
+                ></a>
+              </li>
+            </ul>
           </div>
         </div>
         <div class="row">
