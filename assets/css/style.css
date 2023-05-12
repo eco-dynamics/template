@@ -49,6 +49,11 @@ a {
   font-size: 18px !important;
 }
 
+.px-12 {
+  padding-right: 0;
+  padding-left: 0;
+}
+
 /* === End of Typography === */
 
 /* === Button Style === */
@@ -82,6 +87,26 @@ a {
     rgba(27, 28, 30, 0.4785) 42.55%,
     rgba(27, 28, 30, 0) 94.36%
   );
+}
+
+.feature-card {
+  transition: all 0.3s ease-in-out;
+}
+
+.news-card-main-image {
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+
+.news-card-wrap-image {
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+}
+
+.news-card-wrap-title,
+.news-card-wrap-date {
+  font-size: 14px;
+  font-weight: 500;
 }
 
 .partner-background {
@@ -199,6 +224,18 @@ a {
 }
 /* === Footer === */
 
+@media (min-width: 768px) {
+  .news-card-wrap-title {
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  .news-card-wrap-date {
+    font-size: 16px;
+    font-weight: 600;
+  }
+}
+
 @media (min-width: 992px) {
   .main-title {
     font-size: 48px;
@@ -208,8 +245,33 @@ a {
     font-size: 36px;
   }
 
+  .px-12 {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
   .navbar-logo img {
     height: 28px;
+  }
+
+  .news-card-main-image {
+    border-top-left-radius: 6px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 6px;
+  }
+
+  .news-card-wrap-image {
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    border-bottom-left-radius: 0px;
+  }
+
+  .partner-background {
+    border-radius: 6px;
+  }
+
+  .partner-background::after {
+    transform: rotate(0);
   }
 
   .footer-link {
@@ -242,12 +304,21 @@ a {
     font-size: 48px;
   }
 
-  .partner-background {
-    height: 650px;
+  .feature-card:hover {
+    background-color: var(--main-green);
+    color: #fff;
   }
 
-  .partner-background::after {
-    transform: rotate(0);
+  .news-card-main-title {
+    font-size: 32px;
+  }
+
+  .news-card-wrap-title {
+    font-size: 20px;
+  }
+
+  .partner-background {
+    height: 650px;
   }
 
   .knowledge-text {

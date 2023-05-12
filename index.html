@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#FFFFFF" />
     <title>Ecodynamics | Website</title>
 
     <link rel="stylesheet" href="./assets/css/style.css" />
@@ -200,24 +201,25 @@
     </div>
 
     <section class="py-5">
-      <div class="container px-3">
-        <div class="row mb-4">
-          <div class="col-lg-8">
+      <div class="container px-3 pb-lg-5">
+        <div class="row mb-5">
+          <div class="col-lg-8 text-center mx-auto">
             <h2 class="second-title">
               The Ecodynamics of Sustainable Agriculture
             </h2>
           </div>
         </div>
         <div class="row row-gap-4">
-          <div class="col-lg-4">
-            <div class="c-card-feature p-4 rounded">
-              <div class="c-card-icon mb-4 py-2">
-                <img
-                  src="./assets/images/feature1-light.svg"
-                  alt="feature1-icon"
-                />
-              </div>
-              <div class="c-card-body pb-0">
+          <div class="col-lg-4" x-data="{image:'./assets/images/feature1.svg'}">
+            <div
+              class="card feature-card"
+              x-on:mouseenter="image = './assets/images/feature1-light.svg'"
+              x-on:mouseleave="image = './assets/images/feature1.svg'"
+            >
+              <div class="card-body p-lg-5">
+                <div class="mb-4">
+                  <img :src="image" alt="feature1-icon" />
+                </div>
                 <h3 class="fw-semibold mb-3">Feature 1</h3>
                 <p>
                   Lorem ipsum dolor sit amet consectetur. Tristique eget enim
@@ -229,15 +231,16 @@
               </div>
             </div>
           </div>
-          <div class="col-lg-4">
-            <div class="c-card-feature p-4 rounded">
-              <div class="c-card-icon mb-4 py-2">
-                <img
-                  src="./assets/images/feature2-light.svg"
-                  alt="feature1-icon"
-                />
-              </div>
-              <div class="c-card-body pb-0">
+          <div class="col-lg-4" x-data="{image:'./assets/images/feature2.svg'}">
+            <div
+              class="card feature-card"
+              x-on:mouseenter="image = './assets/images/feature2-light.svg'"
+              x-on:mouseleave="image = './assets/images/feature2.svg'"
+            >
+              <div class="card-body p-lg-5">
+                <div class="mb-4">
+                  <img :src="image" alt="feature2-icon" />
+                </div>
                 <h3 class="fw-semibold mb-3">Feature 2</h3>
                 <p>
                   Lorem ipsum dolor sit amet consectetur. Tristique eget enim
@@ -249,15 +252,16 @@
               </div>
             </div>
           </div>
-          <div class="col-lg-4">
-            <div class="c-card-feature p-4 rounded">
-              <div class="c-card-icon mb-4 py-2">
-                <img
-                  src="./assets/images/feature3-light.svg"
-                  alt="feature1-icon"
-                />
-              </div>
-              <div class="c-card-body pb-0">
+          <div class="col-lg-4" x-data="{image:'./assets/images/feature3.svg'}">
+            <div
+              class="card feature-card"
+              x-on:mouseenter="image = './assets/images/feature3-light.svg'"
+              x-on:mouseleave="image = './assets/images/feature3.svg'"
+            >
+              <div class="card-body p-lg-5">
+                <div class="mb-4">
+                  <img :src="image" alt="feature3-icon" />
+                </div>
                 <h3 class="fw-semibold mb-3">Feature 3</h3>
                 <p>
                   Lorem ipsum dolor sit amet consectetur. Tristique eget enim
@@ -289,34 +293,43 @@
             <div class="card border-0">
               <div class="row align-items-center">
                 <div class="col-lg-6">
-                  <img
-                    src="./assets/images/news-image1.png"
-                    alt="news-images"
-                    class="card-img-top img-fluid"
-                  />
+                  <div class="news-card-main-image overflow-hidden">
+                    <img
+                      src="./assets/images/news-image1.png"
+                      alt="news-images"
+                      class="img-fluid w-100"
+                    />
+                  </div>
                 </div>
                 <div class="col-lg-6">
                   <div class="card-body">
-                    <h5 class="card-title fw-semibold mb-3">
-                      New Study Reveals the Importance of Keystone Species in
-                      Ecodynamic Systems
-                    </h5>
-                    <p class="card-text">
-                      recent study has shed light on the vital role that certain
-                      species play in maintaining ecological systems. These
-                      "keystone species" have a disproportionate impact...
-                    </p>
-                    <div class="d-flex align-items-center">
-                      <div class="avatar me-2">
-                        <img
-                          src="./assets/images/avatar1.png"
-                          alt="avatar"
-                          class="rounded-pill"
-                        />
-                      </div>
-                      <div class="username">
-                        <h6 class="fw-semibold mb-0">Author Name</h6>
-                        <h6 class="text-black-50">21 April 2023</h6>
+                    <div class="row">
+                      <div class="col-lg-10">
+                        <h5 class="news-card-main-title fw-semibold mb-3">
+                          New Study Reveals the Importance of Keystone Species
+                          in Ecodynamic Systems
+                        </h5>
+                        <p class="card-text">
+                          Recent study has shed light on the vital role that
+                          certain species play in maintaining ecological
+                          systems. These keystone species have a
+                          disproportionate impact...
+                        </p>
+                        <div class="d-flex align-items-center">
+                          <div class="avatar me-2">
+                            <img
+                              src="./assets/images/avatar1.png"
+                              alt="avatar"
+                              class="rounded-pill"
+                            />
+                          </div>
+                          <div class="username">
+                            <h6 class="fs-base fw-semibold mb-1">
+                              Author Name
+                            </h6>
+                            <h6 class="fs-base text-black-50">21 April 2023</h6>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -332,66 +345,78 @@
         </div>
         <div class="row">
           <div class="col-lg-4 mb-4">
-            <div class="card border-0">
-              <div class="row g-0">
-                <div class="col-7 col-lg-12">
-                  <img
-                    src="./assets/images/news-image2.png"
-                    alt="news-image"
-                    class="img-fluid rounded-start rounded-start-0"
-                  />
+            <div class="card h-100 border-0">
+              <div class="row g-0 align-items-md-center">
+                <div class="col-6 col-lg-12">
+                  <div class="news-card-wrap-image overflow-hidden h-100">
+                    <img
+                      src="./assets/images/news-image2.png"
+                      alt="news-image"
+                      class="h-100 w-100 object-fit-cover"
+                    />
+                  </div>
                 </div>
-                <div class="col-5 col-lg-12">
+                <div class="col-6 col-lg-12">
                   <div class="card-body">
-                    <h5 class="fs-sm fw-medium">
+                    <h6 class="news-card-wrap-title mb-3">
                       Conservation Group Launches Campaign to Protect Endangered
                       Ecosystems
-                    </h5>
-                    <h6 class="fs-xs mb-0">28 March 2022</h6>
+                    </h6>
+                    <h6 class="news-card-wrap-date text-black-50">
+                      Jan 02, 2023
+                    </h6>
                   </div>
                 </div>
               </div>
             </div>
           </div>
           <div class="col-lg-4 mb-4">
-            <div class="card border-0">
-              <div class="row g-0">
-                <div class="col-7">
-                  <img
-                    src="./assets/images/news-image3.png"
-                    alt="news-image"
-                    class="img-fluid rounded-start"
-                  />
+            <div class="card h-100 border-0">
+              <div class="row g-0 align-items-md-center">
+                <div class="col-6 col-lg-12">
+                  <div class="news-card-wrap-image overflow-hidden h-100">
+                    <img
+                      src="./assets/images/news-image3.png"
+                      alt="news-image"
+                      class="h-100 w-100 object-fit-cover"
+                    />
+                  </div>
                 </div>
-                <div class="col-5">
+                <div class="col-6 col-lg-12">
                   <div class="card-body">
-                    <h5 class="fs-sm fw-medium">
-                      Conservation Group Launches Campaign to Protect Endangered
-                      Ecosystems
-                    </h5>
-                    <h6 class="fs-xs mb-0">28 March 2022</h6>
+                    <h6 class="news-card-wrap-title mb-3">
+                      Scientists Develop Innovative Approach to Ecological
+                      Restoration
+                    </h6>
+                    <h6 class="news-card-wrap-date text-black-50 mt-auto">
+                      Aug 20, 2022
+                    </h6>
                   </div>
                 </div>
               </div>
             </div>
           </div>
           <div class="col-lg-4 mb-4">
-            <div class="card border-0">
-              <div class="row g-0">
-                <div class="col-7">
-                  <img
-                    src="./assets/images/news-image4.png"
-                    alt="news-image"
-                    class="img-fluid rounded-start"
-                  />
+            <div class="card h-100 border-0">
+              <div class="row g-0 align-items-md-center">
+                <div class="col-6 col-lg-12">
+                  <div class="news-card-wrap-image overflow-hidden h-100">
+                    <img
+                      src="./assets/images/news-image4.png"
+                      alt="news-image"
+                      class="h-100 w-100 object-fit-cover"
+                    />
+                  </div>
                 </div>
-                <div class="col-5">
+                <div class="col-6 col-lg-12">
                   <div class="card-body">
-                    <h5 class="fs-sm fw-medium">
-                      Conservation Group Launches Campaign to Protect Endangered
-                      Ecosystems
-                    </h5>
-                    <h6 class="fs-xs mb-0">28 March 2022</h6>
+                    <h6 class="news-card-wrap-title mb-3">
+                      Government Introduces New Policies to Address Climate
+                      Change and Biodiversity Loss Less
+                    </h6>
+                    <h6 class="news-card-wrap-date text-black-50 mt-auto">
+                      Aug 02, 2022
+                    </h6>
                   </div>
                 </div>
               </div>
@@ -402,24 +427,18 @@
     </section>
 
     <section class="py-5">
-      <div class="container position-relative">
-        <div class="row">
-          <div class="col-lg-12">
-            <div
-              class="partner-background position-relative w-100 rounded overflow-hidden"
-            >
-              <img
-                src="./assets/images/partnership-background.png"
-                alt="hero-background"
-                class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover object-position-center"
-              />
-            </div>
-          </div>
+      <div class="container-lg px-0 px-lg-3 position-relative py-lg-5">
+        <div class="partner-background position-relative w-100 overflow-hidden">
+          <img
+            src="./assets/images/partnership-background.png"
+            alt="hero-background"
+            class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover object-position-center"
+          />
         </div>
         <div class="position-absolute top-0 start-0 w-100 h-100">
           <div class="container h-100 d-flex align-items-center">
-            <div class="row justify-content-end">
-              <div class="col-lg-6 pe-lg-5">
+            <div class="row justify-content-lg-end">
+              <div class="col-md-7 col-lg-6 pe-lg-5">
                 <h2 class="second-title text-white mb-3">
                   Building a Sustainable Future Through Collaborative
                   Partnership
@@ -446,7 +465,7 @@
     </section>
 
     <section class="py-5">
-      <div class="container">
+      <div class="container pb-lg-5">
         <div class="row align-items-center">
           <div class="col-lg-6 mb-4 pe-lg-5">
             <h2 class="second-title mb-4">
@@ -466,7 +485,7 @@
             <div class="knowledge-image position-relative">
               <picture>
                 <source
-                  media="(min-width: 1200px)"
+                  media="(min-width: 768px)"
                   srcset="./assets/images/knowledge-image-xl.png"
                 />
                 <img
