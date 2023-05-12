@@ -89,6 +89,10 @@ a {
   );
 }
 
+.hero-content {
+  padding-bottom: 60px;
+}
+
 .feature-card {
   transition: all 0.3s ease-in-out;
 }
@@ -225,6 +229,10 @@ a {
 /* === Footer === */
 
 @media (min-width: 768px) {
+  .hero-content {
+    padding-bottom: 80px;
+  }
+
   .news-card-wrap-title {
     font-size: 18px;
     font-weight: 600;
@@ -302,6 +310,10 @@ a {
 
   .second-title {
     font-size: 48px;
+  }
+
+  .hero-content {
+    padding-bottom: 100px;
   }
 
   .feature-card:hover {
