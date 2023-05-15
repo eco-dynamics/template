@@ -49,9 +49,26 @@ a {
   font-size: 18px !important;
 }
 
+.ms-n1 {
+  margin-left: -0.25rem !important;
+}
+
+.hehe {
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
 .px-12 {
   padding-right: 0;
   padding-left: 0;
+}
+
+.pt-86 {
+  padding-top: 86px;
+}
+
+.bg-fern-green {
+  background-color: var(--main-green);
 }
 
 /* === End of Typography === */
@@ -198,6 +215,10 @@ a {
   object-position: center;
 }
 
+.green-box {
+  padding: 80px 18px;
+}
+
 /* === Header === */
 .navbar-logo img {
   height: 24px;
@@ -241,6 +262,10 @@ a {
   .news-card-wrap-date {
     font-size: 16px;
     font-weight: 600;
+  }
+
+  .green-box {
+    padding: 50px 60px;
   }
 }
 
@@ -301,6 +326,10 @@ a {
   .footer-social:hover {
     color: #78a52b;
   }
+
+  .green-box {
+    padding: 60px 80px;
+  }
 }
 
 @media (min-width: 1200px) {
@@ -354,4 +383,23 @@ a {
   .footer-logo img {
     height: 45px;
   }
+
+  .green-box {
+    padding: 130px 200px;
+  }
+}
+
+.swiper {
+  width: 100%;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.swiper-slide {
+  max-width: 300px;
 }
