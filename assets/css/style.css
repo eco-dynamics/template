@@ -249,6 +249,11 @@ a {
 }
 /* === Footer === */
 
+.form-control:focus {
+  box-shadow: none !important;
+  border-color: var(--second-green) !important;
+}
+
 @media (min-width: 768px) {
   .hero-content {
     padding-bottom: 80px;
