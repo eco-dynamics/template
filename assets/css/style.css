@@ -71,6 +71,14 @@ a {
   background-color: var(--main-green);
 }
 
+.card-image:hover img {
+  transform: scale(1.1);
+}
+
+.news-card-wrap-image:hover img {
+  transform: scale(1.1);
+}
+
 /* === End of Typography === */
 
 /* === Button Style === */
