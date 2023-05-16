@@ -4,7 +4,29 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#FFFFFF" />
-    <title>Ecodynamics | Website</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+      crossorigin="anonymous"
+    />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon.ico"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./assets/images/favicon.ico"
+    />
+
+    <title>Ecodynamics | Knowledge Center</title>
 
     <link rel="stylesheet" href="./assets/css/style.css" />
 
@@ -126,14 +148,14 @@
           @scroll.window="scroll = (window.pageYOffset < 8) ? false: true"
         >
           <div class="container d-flex justify-content-between py-2">
-            <div class="navbar-logo">
+            <a href="/" class="navbar-logo">
               <img
                 x-data="{onTop : true}"
                 src="./assets/images/ecodynamics-logo.svg"
                 @scroll.window="onTop = (window.pageYOffset > 8) ? false: true"
                 alt="ecodynamics-negative-logo"
               />
-            </div>
+            </a>
             <div class="d-flex" :class="scroll ? 'scrolled' : ''">
               <a class="navlink fs-medium px-3 text-dark" href="/about.html"
                 >About</a
@@ -238,7 +260,7 @@
         </div>
       </section>
 
-      <section class="bg-light pt-5">
+      <section class="bg-light pt-5 pb-lg-5">
         <div class="container px-3">
           <div class="row mb-4">
             <div class="col-lg-8">
@@ -253,14 +275,16 @@
           </div>
           <div class="row mb-lg-4">
             <div class="col-lg-12">
-              <div class="card border-0">
+              <a href="/news-detail.html" class="card border-0">
                 <div class="row">
                   <div class="col-lg-6">
-                    <div class="news-card-main-image overflow-hidden h-100">
+                    <div
+                      class="news-card-main-image card-image overflow-hidden h-100"
+                    >
                       <img
                         src="./assets/images/news-image1.png"
                         alt="news-images"
-                        class="w-100 h-100"
+                        class="w-100 h-100 transition"
                       />
                     </div>
                   </div>
@@ -300,7 +324,7 @@
                     </div>
                   </div>
                 </div>
-              </div>
+              </a>
             </div>
           </div>
           <div class="row">
@@ -310,14 +334,14 @@
           </div>
           <div class="row">
             <div class="col-lg-4 mb-4">
-              <div class="card h-100 border-0">
+              <a href="/news-detail.html" class="card h-100 border-0">
                 <div class="row g-0 align-items-md-center">
                   <div class="col-6 col-lg-12">
                     <div class="news-card-wrap-image overflow-hidden h-100">
                       <img
                         src="./assets/images/news-image2.png"
                         alt="news-image"
-                        class="h-100 w-100 object-fit-cover"
+                        class="h-100 w-100 object-fit-cover transition"
                       />
                     </div>
                   </div>
@@ -333,17 +357,17 @@
                     </div>
                   </div>
                 </div>
-              </div>
+              </a>
             </div>
             <div class="col-lg-4 mb-4">
-              <div class="card h-100 border-0">
+              <a href="/news-detail.html" class="card h-100 border-0">
                 <div class="row g-0 align-items-md-center">
                   <div class="col-6 col-lg-12">
                     <div class="news-card-wrap-image overflow-hidden h-100">
                       <img
                         src="./assets/images/news-image3.png"
                         alt="news-image"
-                        class="h-100 w-100 object-fit-cover"
+                        class="h-100 w-100 object-fit-cover transition"
                       />
                     </div>
                   </div>
@@ -359,17 +383,17 @@
                     </div>
                   </div>
                 </div>
-              </div>
+              </a>
             </div>
             <div class="col-lg-4 mb-4">
-              <div class="card h-100 border-0">
+              <a href="/news-detail.html" class="card h-100 border-0">
                 <div class="row g-0 align-items-md-center">
                   <div class="col-6 col-lg-12">
                     <div class="news-card-wrap-image overflow-hidden h-100">
                       <img
                         src="./assets/images/news-image4.png"
                         alt="news-image"
-                        class="h-100 w-100 object-fit-cover"
+                        class="h-100 w-100 object-fit-cover transition"
                       />
                     </div>
                   </div>
@@ -380,17 +404,17 @@
                         Change and Biodiversity Loss Less
                       </h6>
                       <h6 class="news-card-wrap-date text-black-50 mt-auto">
-                        Aug 02, 2022
+                        Aug 20, 2022
                       </h6>
                     </div>
                   </div>
                 </div>
-              </div>
+              </a>
             </div>
-            <div class="row">
-              <div class="col-lg-12">
-                <hr />
-              </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-12">
+              <hr />
             </div>
           </div>
         </div>

@@ -4,7 +4,29 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#FFFFFF" />
-    <title>Ecodynamics | Website</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+      crossorigin="anonymous"
+    />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon.ico"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./assets/images/favicon.ico"
+    />
+
+    <title>Ecodynamics | About</title>
 
     <link rel="stylesheet" href="./assets/css/style.css" />
 
@@ -122,25 +144,33 @@
           @scroll.window="scroll = (window.pageYOffset < 8) ? false: true"
         >
           <div class="container d-flex justify-content-between py-2">
-            <div class="navbar-logo">
+            <a href="/" class="navbar-logo">
               <img
                 x-data="{onTop : true}"
                 src="./assets/images/ecodynamics-logo.svg"
                 @scroll.window="onTop = (window.pageYOffset > 8) ? false: true"
                 alt="ecodynamics-negative-logo"
               />
-            </div>
-            <div class="d-flex" :class="scroll ? 'scrolled' : ''">
-              <a class="navlink fs-medium px-3 text-dark" href="/about.html">About</a>
-              <a class="navlink fs-medium px-3 text-dark" href="/news.html">News</a>
-              <a class="navlink fs-medium px-3 text-dark" href="/partners.html"
-                >Partners</a
-              >
-              <a class="navlink fs-medium px-3 text-dark" href="/knowledge.html"
-                >Knowledge</a
-              >
-              <a class="navlink fs-medium ps-3 text-dark" href="/contact.html">Contact</a>
-            </div>
+            </a>
+            <ul class="list-unstyled d-flex m-0" :class="scroll ? 'scrolled' : ''">
+              <li class="px-3">
+                <a class="navlink navbar-light fs-medium" href="/about.html">About</a>
+              </li>
+              <li class="px-3">
+                <a class="navlink navbar-light fs-medium" href="/news.html">News</a>
+              </li>
+              <li class="px-3">
+                <a class="navlink navbar-light fs-medium" href="/partners.html"
+                >Partners</a>
+              </li>
+              <li class="px-3">
+                <a class="navlink navbar-light fs-medium" href="/knowledge.html"
+                >Knowledge</a>
+              </li>
+              <li class="ps-3">
+                <a class="navlink navbar-light fs-medium ps-3" href="/contact.html">Contact</a>
+              </li>
+            </ul>
           </div>
         </nav>
       </div>
